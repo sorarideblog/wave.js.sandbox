@@ -1,0 +1,13 @@
+version: '3'
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wave-js-sandbox
+    volumes:
+      - ./:/usr/src/app
+    working_dir: /usr/src/app
+    ports:
+      - "20000:3000"
+    stdin_open: true
