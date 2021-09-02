@@ -20,8 +20,8 @@ const Index = () => {
 
         let wave = new Wave()
         const options = {
-            type: 'bars', 
-            colors: ['black'],
+            type: 'bars blocks',
+            colors: ['black', 'red', 'blue'],
             stroke: 0
         }
         wave.fromElement('audio', 'audio_canvas', options)
@@ -36,18 +36,18 @@ const Index = () => {
 
     return (
         <>
-        <div>
-        <h1>Home page</h1>
-        </div>
+            <div>
+                <h1>Home page</h1>
+            </div>
 
-        <main>
-            <canvas id="audio_canvas" height="500" width="500"></canvas>
+            <main>
+                <canvas id="audio_canvas" height="300" width="500"></canvas>
 
-            <audio id="audio"></audio>
-            <button id="play_button" onClick={play}>PLAY</button>
-        </main>
+                <audio id="audio"></audio>
+                <button id="play_button" onClick={play}>PLAY</button>
+            </main>
         </>
-  )
-    }
-  
-  export default Index 
+    )
+}
+
+export default Index
